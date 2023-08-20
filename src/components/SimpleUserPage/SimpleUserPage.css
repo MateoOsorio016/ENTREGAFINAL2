@@ -1,0 +1,51 @@
+.simpleUserPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100vh;
+}
+
+.simpleUserPage--header {
+	width: 100%;
+	height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simpleUserPage--header img{
+    height: 100%;
+}
+
+.simpleUserPage--main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.simpleUserPage--footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 58px;
+    background: #9F212F;
+    color: #fff;
+}
+
+.simpleUserPage--footerCopy{
+    font-weight: bold;
+}
+
+.simpleUserPage--footerSocial{
+    display: flex;
+    gap: 1rem;
+}
+
+.simpleUserPage--footerSocial a{
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,25 @@
+.linksContainer{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.linksStyle{
+    color: #9f212f;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    &::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #9f212f;
+        transition: width .3s;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}

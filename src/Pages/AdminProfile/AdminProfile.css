@@ -1,0 +1,114 @@
+.AdminProfile--container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.AdminProfile--container .AdminProfile--container__image{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid #9f212f;
+}
+
+.AdminProfile--container .AdminProfile--container__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AdminProfile--container .AdminProfile--container__name{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.AdminProfile--container .AdminProfile--container__nameAccount{
+    font-size: 30px;
+    font-weight: bold;
+    color: #9f212f;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.AdminProfile--container .AdminProfile--container__name .AdminProfile--container__nameRol{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #5d5d5d;
+}
+
+.AdminProfile--container .AdminProfile--container__info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.AdminProfile--container .AdminProfile--container__info .AdminProflie--container__infoColumn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.AdminProfile--container .AdminProfile--container__info .AdminProflie--container__infoColumn:first-child{
+    align-items: flex-start;
+}
+
+.AdminProfile--container .AdminProfile--container__info .AdminProflie--container__infoColumn:last-child{
+    align-items: flex-end;
+}
+
+
+.AdminProfile--container .AdminProfile--container__info .AdminProfile--container__info--item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    gap: .5rem;
+}
+
+.AdminProfile--container .AdminProfile--container__info .AdminProfile--container__info--item .AdminProfile--container__info--item__title{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #5d5d5d;
+}
+
+.AdminProfile--container .AdminProfile--container__info .AdminProfile--container__info--item .AdminProfile--container__info--item__value{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #9f212f;
+}
+
+.AdminProfile--container .AdminProfile--edit{
+    position: absolute;
+    top: 1rem;
+    right: 25%;
+}
+
+.AdminProfile--container .AdminProfile--edit svg{
+    width: 30px;
+    height: 30px;
+    color: #9f212f;
+    cursor: pointer;
+}

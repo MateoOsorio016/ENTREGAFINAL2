@@ -1,0 +1,210 @@
+/* Form Styles */
+form {
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: center;
+	width: 100%;
+	max-width: 600px;
+	padding: 15px;
+	margin: auto;
+	background: #fff;
+	gap: 1rem;
+}
+
+form h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #9f212f;
+	margin-bottom: 1rem;
+}
+
+form .inputsFormContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+/* General Inputs */
+
+form .inputControl {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	position: relative;
+}
+
+form .inputControl.inputControl--fullInput{
+	width: 100%;
+}
+
+form .inputControl.inputControl--halfInput{
+	width: 48%;
+}
+
+form .inputControl input {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	border: 1px solid #d6cab0;
+	outline: none;
+	font-size: 1rem;
+	font-weight: lighter;
+}
+
+form .inputControl input::placeholder {
+	color: transparent;
+}
+
+form .inputControl label {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
+	font-size: 1rem;
+	font-weight: lighter;
+	color: #d6cab0;
+	pointer-events: none;
+	transition: all 0.3s ease-in-out;
+	background: #fff;
+	padding: 0 0.25rem;
+}
+
+form .inputControl input:focus {
+	border: 2px solid #9f212f;
+}
+
+form .inputControl input:focus ~ label {
+	top: 0;
+	font-size: 0.8rem;
+	color: #9f212f;
+}
+
+form .inputControl input:not(:focus):not(:placeholder-shown) ~ label {
+	top: 0;
+	font-size: 0.8rem;
+	color: #d6cab0;
+}
+
+/* Select Input */
+
+form .selectControl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+form .selectControl.selectControl--fullInput{
+	width: 100%;
+}
+
+form .selectControl.selectControl--halfInput{
+	width: 48%;
+}
+
+form .selectControl select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #d6cab0;
+    outline: none;
+    font-size: 1rem;
+    font-weight: lighter;
+    appearance: none;
+    background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-512.png) no-repeat right #fff;
+    background-position: 95%;
+    background-size: 15px;
+}
+
+form .selectControl label{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #d6cab0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    padding: 0 0.25rem;
+}
+
+form .selectControl select:focus {
+    border: 2px solid #9f212f;
+}
+
+form .selectControl select:focus ~ label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #9f212f;
+}
+
+form .selectControl.active select:not(:focus) ~ label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #d6cab0;
+}
+
+/* Input Checkbox */
+form .inputCheckbox{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	gap: 0.5rem;
+}
+
+form .inputCheckbox input[type="checkbox"] {
+	cursor: pointer;
+	background-color: #fff;
+	width: 15px;
+	height: 15px;
+	appearance: none;
+	border: 2px solid #d6cab0;
+	border-radius: 50%;
+	outline: none;
+	position: relative;
+}
+
+form .inputCheckbox input[type="checkbox"]::before {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	border-radius: 50%; /* Ajusta el valor de la propiedad border-radius según desees */
+	transition: background-color 0.3s ease-in-out;
+}
+
+form .inputCheckbox input[type="checkbox"]:checked::before {
+	background-color: #9f212f;
+}
+
+/* Error Styles */
+
+form .inputControl.inputControl--error input,
+form .selectControl.selectControl--error select{
+	border: 2px solid red;
+}
+
+form .inputControl.inputControl--error label,
+form .selectControl.selectControl--error label{
+	color: red;
+}
+
+form .inputControl.inputControl--error .error,
+form .selectControl.selectControl--error .error{
+	color: red;
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+	position: absolute;
+	bottom: -1rem;
+
+}
